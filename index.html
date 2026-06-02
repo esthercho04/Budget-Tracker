@@ -144,7 +144,7 @@
 const KEY = 'budget_v1';
 let data = {};
 let active = '';
-let sidebarVisible = true;
+let sidebarVisible = false;
 let touchStartX = 0;
 let touchStartY = 0;
 
@@ -258,6 +258,7 @@ appEl.addEventListener('touchend',e=>{
 load();
 active=monthKey(new Date());
 ensure(active);
+document.getElementById('sidebar').classList.add('hidden');
 renderAll();
 </script>
 </body>
